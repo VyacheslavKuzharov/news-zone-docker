@@ -33,7 +33,7 @@ hosts:
 	@echo "\n\033[1;m Adding record in to your local /etc/hosts file.\033[0m"
 	@echo "\n\033[1;m Please use your local sudo password.\033[0m"
 	@echo '127.0.0.1 localhost dev.newszone.com'| sudo tee -a /etc/hosts
-	@echo "\n\033[1;m Your app available at www.news-zone.dev \033[0m"
+	@echo "\n\033[1;m Your app available at http://dev.newszone.com/ \033[0m"
 
 rebuild: stop
 	@echo "\n\033[0;33m Rebuilding containers... \033[0m"
