@@ -39,6 +39,12 @@ rebuild: stop
 	@echo "\n\033[0;33m Rebuilding containers... \033[0m"
 	@docker-compose build --no-cache
 
+migrate: stop
+	@echo "\n\033[0;33m rails db:migrate... \033[0m"
+	@docker-compose run backend rails db:migrate
+	@$(START)
+	@$(MAKE) status
+
 help:
 	@echo "\033[1;32mdocker-env\t\t- Main scenario, used by default\033[0m"
 
