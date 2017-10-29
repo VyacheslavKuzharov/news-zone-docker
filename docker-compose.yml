@@ -22,7 +22,7 @@ services:
     env_file:
       - 'app/backend/config/application.yml'
     ports:
-      - '3000:3000'
+      - '5000:5000'
       - '3035:3035'
     depends_on:
       - db

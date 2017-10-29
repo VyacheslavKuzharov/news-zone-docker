@@ -45,6 +45,10 @@ migrate: stop
 	@$(START)
 	@$(MAKE) status
 
+logs-backend:
+	@$(LOGS) --tail=100 -f backend
+
+
 help:
 	@echo "\033[1;32mdocker-env\t\t- Main scenario, used by default\033[0m"
 
